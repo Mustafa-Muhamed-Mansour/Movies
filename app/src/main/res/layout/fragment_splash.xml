@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:orientation="horizontal"
-            android:layout_margin="10dp">
+            android:layout_margin="@dimen/_10sdp">
 
 
             <LinearLayout
@@ -32,18 +32,19 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="horizontal"
-                android:padding="5dp"
-                android:layout_margin="3dp"
+                android:padding="@dimen/_5sdp"
+                android:layout_margin="@dimen/_3sdp"
                 android:layout_gravity="center" />
 
             <Button
                 android:id="@+id/btn_action_onboarding"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="3dp"
+                android:layout_margin="@dimen/_3sdp"
                 android:backgroundTint="@color/white" />
 
         </LinearLayout>
 
     </RelativeLayout>
+
 </layout>

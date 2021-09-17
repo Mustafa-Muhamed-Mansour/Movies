@@ -2,7 +2,6 @@ package com.movies.ui.splash;
 
 import android.graphics.Color;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
@@ -10,7 +9,6 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.viewpager2.widget.ViewPager2;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +16,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.movies.R;
-import com.movies.adapter.Onboarding.OnBoardingAapter;
+import com.movies.adapter.onboarding.OnBoardingAapter;
 import com.movies.databinding.FragmentSplashBinding;
 import com.movies.model.OnBoardingModel;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -70,9 +67,9 @@ public class SplashFragment extends Fragment
     private void initViews()
     {
         onBoardingModels = new ArrayList<>();
-//        onBoardingModels.add(new OnBoardingModel(R.drawable.ic_group_form, "Form a group", "It is possible to form a group"));
-//        onBoardingModels.add(new OnBoardingModel(R.drawable.ic_message, "Message Chat", "It is possible to chat with someone in the group"));
-//        onBoardingModels.add(new OnBoardingModel(R.drawable.ic_running, "Let's Go", "Let's go see the program"));
+        onBoardingModels.add(new OnBoardingModel(R.drawable.ic_watch_alone, "Enjoy alone", "You can enjoy Movie X by alone"));
+        onBoardingModels.add(new OnBoardingModel(R.drawable.ic_watch_movie, "watch with the one you love", "You can watch the movie X with the one you love"));
+        onBoardingModels.add(new OnBoardingModel(R.drawable.ic_search_film, "search for a film", "You can search for x movie you want to watch"));
         onBoardingAapter = new OnBoardingAapter(onBoardingModels);
         fragmentSplashBinding.viewPagerOnboarding.setAdapter(onBoardingAapter);
     }
@@ -143,7 +140,7 @@ public class SplashFragment extends Fragment
                 }
                 else
                 {
-//                    navController.navigate(R.id.action_splashFragment_to_logInEmailFragment);
+                    navController.navigate(R.id.action_splashFragment_to_showFragment);
                 }
             }
         });

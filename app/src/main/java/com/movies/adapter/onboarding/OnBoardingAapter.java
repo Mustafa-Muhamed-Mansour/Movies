@@ -1,4 +1,4 @@
-package com.movies.adapter.Onboarding;
+package com.movies.adapter.onboarding;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +14,7 @@ import com.movies.model.OnBoardingModel;
 
 import java.util.List;
 
-public class OnBoardingAapter extends RecyclerView.Adapter<OnBoardingAapter.OnBoardingViewHolder>
+public class OnBoardingAapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 {
 
     List<OnBoardingModel> onBoardingModels;
@@ -26,19 +26,20 @@ public class OnBoardingAapter extends RecyclerView.Adapter<OnBoardingAapter.OnBo
 
     @NonNull
     @Override
-    public OnBoardingViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
+    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)
     {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_onboarding, parent, false);
         return new OnBoardingViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull OnBoardingViewHolder holder, int position)
+    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position)
     {
         OnBoardingModel model = onBoardingModels.get(position);
-        holder.imageViewOnBoarding.setImageResource(model.getImageOnBoarding());
-        holder.textTitleOnBoarding.setText(model.getTitleOnBoarding());
-        holder.textDescriptionOnBoarding.setText(model.getDescriptionOnBoarding());
+        OnBoardingViewHolder onBoardingViewHolder = (OnBoardingViewHolder) holder;
+        onBoardingViewHolder.imageViewOnBoarding.setImageResource(model.getImageOnBoarding());
+        onBoardingViewHolder.textTitleOnBoarding.setText(model.getTitleOnBoarding());
+        onBoardingViewHolder.textDescriptionOnBoarding.setText(model.getDescriptionOnBoarding());
     }
 
     @Override
@@ -46,6 +47,7 @@ public class OnBoardingAapter extends RecyclerView.Adapter<OnBoardingAapter.OnBo
     {
         return onBoardingModels.size();
     }
+
 
     public class OnBoardingViewHolder extends RecyclerView.ViewHolder
     {

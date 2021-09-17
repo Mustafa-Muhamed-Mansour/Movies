@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".showdetails.ShowDetailsFragment"
+        android:background="@color/colorPrimaryDark"
+        >
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/view_pager_img_slider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" />
+
+    <!--        <View-->
+    <!--            android:id="@+id/view_bg_show_details"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="@dimen/_30sdp"-->
+    <!--            android:layout_below="@id/view_pager_img_slider"-->
+    <!--            android:background="@drawable/background_show_details"-->
+    <!--            android:visibility="gone"-->
+    <!--            />-->
+
+        <ProgressBar
+            android:id="@+id/progress_loading_details_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+</layout>

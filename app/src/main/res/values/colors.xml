@@ -4,4 +4,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#151D35</color>
+    <color name="colorPrimaryLight">#1E2746</color>
+    <color name="colorTextSecondary">#4A5BB2</color>
+    <color name="colorTextOther">#FAD303</color>
+    <color name="colorThemeExtra">#FF5252</color>
 </resources>

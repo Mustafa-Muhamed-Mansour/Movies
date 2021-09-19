@@ -21,6 +21,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.movies.R;
 import com.movies.adapter.showmovies.ShowAdapter;
 import com.movies.constants.VariableConstant;
 import com.movies.databinding.ShowFragmentBinding;
@@ -58,6 +59,7 @@ public class ShowFragment extends Fragment
         showViewModel = new ViewModelProvider(requireActivity()).get(ShowViewModel.class);
 
         initialViews();
+        clickedViews();
         getShow();
 
     }
@@ -89,6 +91,18 @@ public class ShowFragment extends Fragment
         });
     }
 
+    private void clickedViews()
+    {
+        showFragmentBinding.imgSearch.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View view)
+            {
+                navController.navigate(R.id.action_showFragment_to_searchFragment);
+            }
+        });
+    }
+
     @SuppressLint("NewApi")
     private void getShow()
     {
@@ -102,7 +116,7 @@ public class ShowFragment extends Fragment
                 progressLoading();
                 if (showResponse != null)
                 {
-                    VariableConstant.totalAvailblePage = showResponse.getTotalPages();
+//                    VariableConstant.totalAvailblePage = showResponse.getTotalPages();
                     if (showResponse.getShowModels() != null)
                     {
                         int oldCount = showModels.size();

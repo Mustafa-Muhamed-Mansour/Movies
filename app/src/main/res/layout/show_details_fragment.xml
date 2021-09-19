@@ -4,29 +4,269 @@
 
     <data>
 
+        <variable
+            name="loadingDetailsMovies"
+            type="Boolean" />
+
+        <import type="android.view.View"/>
+
     </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimaryDark"
+        >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".showdetails.ShowDetailsFragment"
-        android:background="@color/colorPrimaryDark"
         >
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager_img_slider"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" />
+            android:layout_height="@dimen/_170sdp"
+            android:visibility="gone"
+            />
 
-    <!--        <View-->
-    <!--            android:id="@+id/view_bg_show_details"-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="@dimen/_30sdp"-->
-    <!--            android:layout_below="@id/view_pager_img_slider"-->
-    <!--            android:background="@drawable/background_show_details"-->
-    <!--            android:visibility="gone"-->
-    <!--            />-->
+            <View
+                android:id="@+id/view_bg_img_slider_show_details"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@id/view_pager_img_slider"
+                android:background="@drawable/background_show_details"
+                android:visibility="gone"
+                />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_slider_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_above="@id/view_bg_img_slider_show_details"
+            android:visibility="gone"
+            />
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@android:color/darker_gray"
+            android:src="@drawable/ic_back" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_pager_img_slider"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/_5sdp"
+            >
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/round_img_movie"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_margin="@dimen/_5sdp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_margin="@dimen/_5sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_name_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13ssp" />
+
+
+                <TextView
+                    android:id="@+id/txt_network_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:textColor="@color/colorTextOther"
+                    android:textSize="@dimen/_11ssp" />
+
+
+                <TextView
+                    android:id="@+id/txt_start_data_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/_10ssp" />
+
+                <TextView
+                    android:id="@+id/txt_status_show"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_3sdp"
+                    android:padding="@dimen/_3sdp"
+                    android:textColor="@color/colorThemeExtra"
+                    android:textSize="@dimen/_10ssp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_description_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_3sdp"
+            android:layout_margin="@dimen/_3sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            android:layout_below="@id/linear_layout_horizontal"
+            android:maxLines="3"
+            />
+
+        <TextView
+            android:id="@+id/txt_read_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_description_show"
+            android:layout_margin="@dimen/_3sdp"
+            android:padding="@dimen/_3sdp"
+            android:text="Read More"
+            android:textColor="@color/colorTextSecondary"
+            android:textSize="@dimen/_10ssp"
+            />
+
+        <View
+            android:id="@+id/view_bg_one_show_details"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_below="@id/txt_read_more"
+            android:background="@drawable/background_show_details"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_details_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_bg_one_show_details"
+            android:layout_margin="@dimen/_5sdp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:src="@drawable/ic_star" />
+
+            <TextView
+                android:id="@+id/txt_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+
+            <View
+                android:id="@+id/view_one"
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="@dimen/_5sdp"
+                android:background="@color/colorTextSecondary"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_genre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+            <View
+                android:id="@+id/view_two"
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="@dimen/_5sdp"
+                android:background="@color/colorTextSecondary"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_runtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_3sdp"
+                android:padding="@dimen/_3sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/view_bg_two_show_details"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_10sdp"
+            android:layout_below="@id/linear_layout_details_more"
+            android:background="@drawable/background_show_details"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:id="@+id/linear_layout_inculde_buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/view_bg_two_show_details"
+            android:layout_margin="@dimen/_5sdp"
+            >
+
+
+            <Button
+                android:id="@+id/btn_website"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#03A9F4"
+                android:text="WEBSITE"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@color/white"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                />
+
+            <Button
+                android:id="@+id/btm_episode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/colorTextOther"
+                android:text="EPISODES"
+                android:textSize="@dimen/_15ssp"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                />
+
+
+
+        </LinearLayout>
 
         <ProgressBar
             android:id="@+id/progress_loading_details_movie"
@@ -36,6 +276,11 @@
             android:visibility="gone"
             />
 
+<!--        android:visibility="@{loadingDetailsMovies ? View.VISIBLE : View.GONE, default = gone}"-->
+
+
     </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 </layout>

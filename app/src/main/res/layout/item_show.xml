@@ -16,7 +16,7 @@
 
         <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/item_img_show"
-            android:layout_width="@dimen/_80sdp"
+            android:layout_width="@dimen/_100sdp"
             android:layout_height="match_parent"
             android:layout_margin="@dimen/_5sdp"
             android:scaleType="centerCrop"

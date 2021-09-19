@@ -4,15 +4,15 @@
 
     <data>
 
-        <variable
-            name="loadingMovies"
-            type="Boolean" />
+<!--        <variable-->
+<!--            name="loadingMovies"-->
+<!--            type="Boolean" />-->
 
-        <variable
-            name="loadingMoviesMore"
-            type="Boolean" />
-        
-        <import type="android.view.View"/>
+<!--        <variable-->
+<!--            name="loadingMoviesMore"-->
+<!--            type="Boolean" />-->
+<!--        -->
+<!--        <import type="android.view.View"/>-->
 
     </data>
 
@@ -22,7 +22,7 @@
         tools:context=".show.ShowFragment"
         android:orientation="vertical"
         android:animateLayoutChanges="true"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimaryLight"
         >
 
         <LinearLayout
@@ -46,16 +46,6 @@
                 android:gravity="center"
                 />
 
-
-            <ImageView
-                android:id="@+id/img_watch_list"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_eye"
-                android:layout_margin="@dimen/_5sdp"
-                android:padding="@dimen/_3sdp"
-                />
-
             <ImageView
                 android:id="@+id/img_search"
                 android:layout_width="wrap_content"
@@ -76,8 +66,7 @@
                 android:id="@+id/r_v_show"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_above="@id/progress_loading_movie_more"
-                />
+                android:layout_above="@id/progress_loading_movie_more" />
 
             <ProgressBar
                 android:id="@+id/progress_loading_movie"

@@ -50,7 +50,7 @@ public class SplashFragment extends Fragment
         initViews();
 
         //Definition of Indicator LinearLayout (Next, Next and start page Home or other)
-        indicatorLinearLAyout();
+        indicatorLinearLayout();
 
         //Change Indicator LinearLayout
         setCurrentOnBoardingIndicator(0);
@@ -74,7 +74,7 @@ public class SplashFragment extends Fragment
         fragmentSplashBinding.viewPagerOnboarding.setAdapter(onBoardingAapter);
     }
 
-    private void indicatorLinearLAyout()
+    private void indicatorLinearLayout()
     {
         ImageView[] indicators = new ImageView[onBoardingAapter.getItemCount()];
         LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);

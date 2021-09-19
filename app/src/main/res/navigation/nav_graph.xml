@@ -26,12 +26,35 @@
             android:id="@+id/action_showFragment_to_showDetailsFragment"
             app:destination="@id/showDetailsFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_showFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/showDetailsFragment"
         android:name="com.movies.showdetails.ShowDetailsFragment"
         android:label="ShowDetailsFragment"
         tools:layout="@layout/show_details_fragment"
-        />
+        >
+        <action
+            android:id="@+id/action_showDetailsFragment_to_showFragment"
+            app:destination="@id/showFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.movies.search.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/search_fragment"
+        >
+        <action
+            android:id="@+id/action_searchFragment_to_showFragment"
+            app:destination="@id/showFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
 
 </navigation>

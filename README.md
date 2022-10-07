@@ -1,4 +1,4 @@
-# Screen shot
+# You can watch movies and also search by a specific movie name
 
 <img src = "https://user-images.githubusercontent.com/53982895/133948390-43594ad6-38bf-4e14-9d76-313b49682349.png" width = "200" height = "400">  <img src = "https://user-images.githubusercontent.com/53982895/133948393-adafb854-fee1-43f3-ac63-f3e7c5c43cef.png" width = "200" height = "400">
 <img src = "https://user-images.githubusercontent.com/53982895/133948466-9bfa3574-d88f-4d0d-bfdd-f4cec7fa12a7.png" width = "200" height = "400">  <img src = "https://user-images.githubusercontent.com/53982895/133948468-efd55a3e-469f-4d72-b59e-1fba17313d7a.png" width = "200" height = "400">
